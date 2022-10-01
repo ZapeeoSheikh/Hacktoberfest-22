@@ -4,7 +4,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/issues)
 [![GitHub issues by-label](https://img.shields.io/github/issues/ows-ali/Hacktoberfest/help%20wanted.svg)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 [![GitHub issues by-label](https://img.shields.io/github/issues-pr-closed-raw/ows-ali/Hacktoberfest.svg)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/pulls?q=is%3Apr+is%3Aclosed)
-[![GitHub issues by-label](https://img.shields.io/github/issues-pr/ows-ali/Hacktoberfest.svg)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/pulls?q=is%3Aopen+is%3Apr)
+[![GitHub issues by-label](https://img.shields.io/github/issues-pr/ows-ali/Hacktoberfest.svg)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/pulls)
 
 
 # Hacktoberfest Hello World
