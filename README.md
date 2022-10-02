@@ -31,7 +31,7 @@ Hacktoberfest is a program by Digital Ocean and Github, where you can easily win
 
 ### 2. Fork it :fork_and_knife:
 
-You can get your own fork/copy of [Hacktoberfest](https://github.com/shivaylamba/Hacktoberfest) by using the <kbd><b>Fork</b></kbd></a> button or clicking [this](https://github.com/shivaylamba/Hacktoberfest/).
+You can get your own fork/copy of [Hacktoberfest](https://github.com/ZapeeoSheikh/Hacktoberfest-22) by using the <kbd><b>Fork</b></kbd></a> button or clicking [this](https://github.com/ZapeeoSheikh/Hacktoberfest-22/fork).
 
 
 
@@ -47,7 +47,7 @@ You can take a look to the [Programming Language List](https://en.wikipedia.org/
 
 Once you have completed these steps, you are ready to start contributing 
 
-by checking our `Help Wanted` issues and creating [pull requests](https://github.com/shivaylamba/Hacktoberfest/pulls).
+by checking our `Help Wanted` issues and creating [pull requests](https://github.com/ZapeeoSheikh/Hacktoberfest-22/pulls).
 
 ### 5. Give this Project a Star :star:
 
@@ -129,7 +129,7 @@ git clone https://github.com/your-username/Hacktoberfest.git
 
 ###### Next, you’ll have to specify a new remote upstream repository for us to sync with the fork. This will be the original repository that you forked from. you’ll have to do this with the git remote add command.
 
-##### // git remote add upstream https://github.com/shivaylamba/Hacktoberfest.git //
+##### // git remote add upstream https://github.com/ZapeeoSheikh/Hacktoberfest-22 //
 
 ###### In this example, // upstream // is the shortname we have supplied for the remote repository since in terms of Git, “upstream” refers to the repository that you cloned from. If you want to add a remote pointer to the repository of a collaborator, you may want to provide that collaborator’s username or a shortened nickname for the shortname.
 
