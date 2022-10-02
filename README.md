@@ -31,7 +31,7 @@ Hacktoberfest is a program by Digital Ocean and Github, where you can easily win
 
 ### 2. Fork it :fork_and_knife:
 
-You can get your own fork/copy of [Hacktoberfest](https://github.com/shivaylamba/Hacktoberfest) by using the <kbd><b>Fork</b></kbd></a> button or clicking [this](https://github.com/shivaylamba/Hacktoberfest/).
+You can get your own fork/copy of [Hacktoberfest](https://github.com/ZapeeoSheikh/Hacktoberfest-22) by using the <kbd><b>Fork</b></kbd></a> button or clicking [this](https://github.com/ZapeeoSheikh/Hacktoberfest-22/fork).
 
 
 
@@ -47,7 +47,7 @@ You can take a look to the [Programming Language List](https://en.wikipedia.org/
 
 Once you have completed these steps, you are ready to start contributing 
 
-by checking our `Help Wanted` issues and creating [pull requests](https://github.com/shivaylamba/Hacktoberfest/pulls).
+by checking our `Help Wanted` issues and creating [pull requests](https://github.com/ZapeeoSheikh/Hacktoberfest-22/pulls).
 
 ### 5. Give this Project a Star :star:
 
