@@ -1,1 +1,2 @@
 SELECT 'Hello, World!';
+SELECT 'HACKTOBERFEST 2022';
