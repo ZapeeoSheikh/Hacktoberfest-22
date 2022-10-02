@@ -1,0 +1,59 @@
+from multiprocessing import managers
+from xml.sax import default_parser_list
+
+
+# This is a random anime generator that prints a random anime and its default_parser_list
+# Utilizes jikan api for generation of anime
+# Utilizes pythons pretty printer library for formatting text on terminal
+
+from time import sleep
+import requests
+import pprint
+import sys
+
+
+def main():
+    sleep(0.5)
+    print("\nWelcome to random anime generator")
+    sleep(0.5)
+    print('Type "RANDOMIZE" to genrate anime and "STOP" to end the program\n')
+    sleep(0.5)
+    while True:
+        q = input(">>> ")
+
+        if q.lower().strip() == "randomize":
+            print()
+            data = requests.get(
+                "https://api.jikan.moe/v4/random/anime").json()["data"]
+            titles = {'en': data["title"], 'jp': data["title_japanese"]}
+            episodes = data["episodes"]
+            type = data["type"]
+            status = data["status"]
+            synopsis = data["synopsis"]
+            genres_data = data["genres"]
+            genres=[]
+            for genre in genres_data:
+                genres.append(genre["name"])
+            rating = data["rating"]
+            pprint.pprint(f'Title: {titles["en"]}')
+            pprint.pprint(f'Japanese Title: {titles["jp"]}')
+            pprint.pprint(f'Episodes: {episodes}')
+            pprint.pprint(f'Rating: {rating}')
+            pprint.pprint(f'Type: {type}')
+            pprint.pprint(f'Genres: {" ".join(genres)}')
+            pprint.pprint(f'Status: {status}')
+            pprint.pprint(f'Synopsis: {synopsis}')
+            print()
+        elif q.lower() == "stop":
+            print(
+                "\n Thanks for using the random anime generator /n Credits:'Semako123 --github.com/semako123'\n")
+            break
+            sys.exit()
+        else:
+            print("Invalid response")
+            print()
+            continue
+
+
+if __name__ == "__main__":
+    main()
