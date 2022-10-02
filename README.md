@@ -155,4 +155,12 @@ git clone https://github.com/your-username/Hacktoberfest-22.git
 
 ###### You should navigate to your forked repository, and press the “New pull request” button on your left-hand side of the page.
 
+
+## CONTRIBUTORS
+Amazing people who made their contributions for Hacktoberfest. Feel free to contribute, and get yourself featured here!
+
+<a href="https://github.com/ZapeeoSheikh/Hacktoberfest-22/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ZapeeoSheikh/Hacktoberfest-22" />
+</a>
+
 # Hurray!! You just got closer to complete your hacktoberfest challenge.
