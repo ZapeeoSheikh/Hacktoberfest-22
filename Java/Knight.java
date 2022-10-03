@@ -1,14 +1,18 @@
+//Backtracking approach to solve knight's tour problem in java. It is a standard backtracking problem
+// here is a link to the problem description :- https://www.geeksforgeeks.org/the-knights-tour-problem-backtracking-1/
+
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 class Knight
 {
-	static boolean is_safe(int n,int x, int y, int[][] sol)
+	static boolean is_safe(int n,int x, int y, int[][] sol)                               //check if knight can land in coordinates (x,y)
 	{	
 		return(x >= 0 && x < n && y >= 0 && y < n && sol[x][y] == -1);
 	}
 
-	static boolean knightTour(int n,int x,int y, int counter, int[][] sol,int[] xmoves, int[] ymoves)
+	static boolean knightTour(int n,int x,int y, int counter, int[][] sol,int[] xmoves, int[] ymoves)   //move the knight
 	{
 		if(counter==n*n)
 		{	for(int[] i:sol)
@@ -47,7 +51,7 @@ class Knight
 	
 	
 		
-	public static void main(String[] args)
+	public static void main(String[] args)                    //driver code
 	{
 		Scanner x=new Scanner(System.in);
 		int n=x.nextInt();
@@ -66,7 +70,7 @@ class Knight
 
 
 		sol[0][0]=0;
-		int[] xmoves=new int[]{2, 1, -1, -2, -2, -1, 1, 2};
+		int[] xmoves=new int[]{2, 1, -1, -2, -2, -1, 1, 2};                  
 		int[] ymoves=new int[]{ 1, 2, 2, 1, -1, -2, -2, -1 };
 
 		knightTour(n,0,0,1,sol,xmoves,ymoves);
