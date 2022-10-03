@@ -2,6 +2,7 @@
 # input will come from buttons and an input field
 # all output for the game will be printed in the console
 
+# import modules
 import random
 import math
 import simplegui

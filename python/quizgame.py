@@ -9,6 +9,9 @@ playing = input("Do you want to play the game? ")
 if playing.lower() != "yes":
     print("Quiting the game!")
     quit()
+elif playing.lower() != "y":
+    print("Quiting the game!")
+    quit()
 
 question = 1
 score = 0
