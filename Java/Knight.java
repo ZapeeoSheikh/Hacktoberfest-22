@@ -1,5 +1,6 @@
 //Backtracking approach to solve knight's tour problem in java. It is a standard backtracking problem
 // here is a link to the problem description :- https://www.geeksforgeeks.org/the-knights-tour-problem-backtracking-1/
+//the knight must cover all squares starting from (0,0) and return back
 
 
 import java.util.Arrays;
