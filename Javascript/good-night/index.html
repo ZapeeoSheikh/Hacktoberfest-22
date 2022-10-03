@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      .wrapper {
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      #canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -2;
+      }
+
+      #content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .greeting-wrapper {
+        width: 80%;
+      }
+
+      .none {
+        display: none;
+      }
+
+      .copyright {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-family: "poppins";
+        font-size: 10px;
+      }
+    </style>
+    <title>Goodnight</title>
+  </head>
+  <body>
+    <audio id="myAudio">
+      <source src="songs.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <section class="wrapper">
+      <canvas id="canvas"> </canvas>
+      <div id="content">
+        <div class="greeting-wrapper">
+          <h2 class="text-light greeting text-center"></h2>
+          <div class="fireworks-example"></div>
+        </div>
+        <a href="#" class="btn btn-outline-light rounded-0 py-2 px-4 start">
+          START
+        </a>
+        <a
+          href="#"
+          class="btn btn-outline-light rounded-0 py-2 px-4 replay none"
+        >
+          REPLAY
+        </a>
+      </div>
+    </section>
+    <div class="copy">
+      <span class="copyright">&copy;dyatnas</span>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/starback@2.0.1/dist/starback.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      //common
+      function _(el) {
+        if (!(this instanceof _)) {
+          return new _(el);
+        }
+        this.el = document.querySelector(el);
+      }
+
+      _.prototype.fade = function fade(type, ms) {
+        var isIn = type === "in",
+          opacity = isIn ? 0 : 1,
+          interval = 50,
+          duration = ms,
+          gap = interval / duration,
+          self = this;
+
+        if (isIn) {
+          self.el.style.display = "inline-block";
+          self.el.style.opacity = opacity;
+        }
+
+        function func() {
+          opacity = isIn ? opacity + gap : opacity - gap;
+          self.el.style.opacity = opacity;
+
+          if (opacity <= 0) self.el.style.display = "none";
+          if (opacity <= 0 || opacity >= 1) window.clearInterval(fading);
+        }
+
+        var fading = window.setInterval(func, interval);
+      };
+      function block_me(el) {
+        if (!(this instanceof block_me)) {
+          return new block_me(el);
+        }
+        this.el = document.querySelector(el);
+      }
+
+      block_me.prototype.fade = function fade(type, ms) {
+        var isIn = type === "in",
+          opacity = isIn ? 0 : 1,
+          interval = 50,
+          duration = ms,
+          gap = interval / duration,
+          self = this;
+
+        if (isIn) {
+          self.el.style.display = "block";
+          self.el.style.opacity = opacity;
+        }
+
+        function func() {
+          opacity = isIn ? opacity + gap : opacity - gap;
+          self.el.style.opacity = opacity;
+
+          if (opacity <= 0) self.el.style.display = "none";
+          if (opacity <= 0 || opacity >= 1) window.clearInterval(fading);
+        }
+
+        var fading = window.setInterval(func, interval);
+      };
+
+      function playAudio() {
+        var audio = document.getElementById("myAudio");
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play();
+      }
+
+      function findGetParameter(parameterName) {
+        var result = null,
+          tmp = [];
+        location.search
+          .substr(1)
+          .split("&")
+          .forEach(function (item) {
+            tmp = item.split("=");
+            if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+          });
+        return result;
+      }
+
+      // background
+      const canvas = document.getElementById("canvas");
+      const starback = new Starback(canvas, {
+        type: "dot",
+        quantity: 100,
+        direction: 225,
+        backgroundColor: ["#0e1118", "#232b3e"],
+        randomOpacity: true,
+        width: document.body.clientWidth,
+        height: document.body.clientHeight,
+      });
+
+      // typed js
+      let name = findGetParameter("name") || "My Rose";
+      name = name.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+        return letter.toUpperCase();
+      });
+
+      var options = {
+        strings: [
+          "Please wait :)^14000",
+          "Hi..^1000",
+          "How was your day?^1000",
+          "I'ts good?^1000",
+          "I hope its good, you have done your best sofar^1000",
+          "so never give up on yourself :)^1000",
+          "...^5000",
+          "Tonight I just want to say..^1000",
+          "Good night and sleep well^1000",
+          "You..^1000",
+          `${name} 🐼`,
+        ],
+        typeSpeed: 100,
+        backSpeed: 50,
+      };
+
+      const start = document.querySelector(".start");
+      const replay = document.querySelector(".replay");
+
+      function play() {
+        openFullscreen();
+
+        _(".start").fade("out", 500);
+        _(".replay").fade("out", 500);
+
+        setTimeout(function () {
+          new Typed(".greeting", options).destroy();
+          var typed = new Typed(".greeting", options);
+          playAudio();
+        }, 1000);
+
+        setTimeout(function () {
+          _(".replay").fade("in", 1000);
+        }, 75000);
+      }
+
+      start.addEventListener("click", function () {
+        play();
+      });
+
+      replay.addEventListener("click", function () {
+        play();
+      });
+
+      function openFullscreen() {
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+          /* Firefox */
+          document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          /* Chrome, Safari & Opera */
+          document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+          /* IE/Edge */
+          document.documentElement.msRequestFullscreen();
+        }
+      }
+    </script>
+  </body>
+</html>
