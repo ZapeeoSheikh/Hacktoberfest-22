@@ -1,9 +1,12 @@
+// rat through a maze is a standard backtrakcing problem.
+// here is a link for description :-https://www.geeksforgeeks.org/rat-in-a-maze-backtracking-2/
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 class RatMaze
 {
-	static boolean issafe(int n, int x, int y,int[][] maze,int[][] sol)                                       //checking if position is safe
+	static boolean issafe(int n, int x, int y,int[][] maze,int[][] sol)                                       //checking if position (x,y) is safe to move to
 	{
 		return( x<n && y<n && x>=0 && y>=0 && maze[x][y]==1);
 	}
