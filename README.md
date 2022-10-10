@@ -1,4 +1,4 @@
-# Hacktoberfest
+### Hacktoberfest ( This Repository is Excluded for Hacktoberfest 2022 )
 
 [![Contribution Open](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/blob/master/CONTRIBUTING.md)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/issues)
