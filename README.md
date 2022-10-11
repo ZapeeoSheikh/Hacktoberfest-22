@@ -1,4 +1,5 @@
-### Hacktoberfest ( This Repository is Excluded for Hacktoberfest 2022 )
+## Hacktoberfest ( This Repository is Excluded for Hacktoberfest 2022 )
+![img](https://user-images.githubusercontent.com/99472914/192144059-5cd0b329-f238-474b-b475-7385eaa35d05.png)
 
 [![Contribution Open](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/blob/master/CONTRIBUTING.md)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ZapeeoSheikh/Hacktoberfest-22/issues)
@@ -26,8 +27,7 @@ Hacktoberfest is a program by Digital Ocean and Github, where you can easily win
 ## Steps to follow :scroll:
 
 ### 1. Register for Hacktoberfest
-
-###### https://hacktoberfest.digitalocean.com/
+[Register here](https://hacktoberfest.digitalocean.com/)
 
 ### 2. Fork it :fork_and_knife:
 
@@ -70,20 +70,26 @@ https://github.com/your-username/Hacktoberfest-22.git
 ###### You can alternatively copy the URL by using the green “Clone or download” button from your repository page that you just forked from the original repository page. Once you click the button, you’ll be able to copy the URL by clicking the binder button next to the URL:
 
 ###### Once we have the URL, we’re ready to clone the repository. To do this, we’ll combine the git clone command with the repository URL from the command line in a terminal window:
-
+```
 git clone https://github.com/your-username/Hacktoberfest-22.git
+```
 
 ### 4. Create a New Branch
 
 ###### To create your branch, from your terminal window, change your directory so that you are working in the directory of the repository. Be sure to use the actual name of the repository (i.e. Hacktoberfest) to change into that directory.
 
-##### // cd Hacktoberfest //
+#####  Chanage Directory
+```
+ cd Hacktoberfest
+```
 
 ###### Now, we’ll create our new branch with the git branch command. Make sure you name it descriptively so that others working on the project understand what you are working on.
 
-##### // git branch new-branch //
+```
+git checkout -b new-branch
+```
 
-###### Now that our new branch is created, we can switch to make sure that we are working on that branch by using the git checkout command:
+<!-- ###### Now that our new branch is created and switch into it, we can switch to make sure that we are working on that branch by using the git checkout command:
 
 ##### // git checkout new-branch //
 
@@ -91,7 +97,7 @@ git clone https://github.com/your-username/Hacktoberfest-22.git
 
 ###### // Output: //
 
-##### // Switched to branch 'new-branch' //
+##### // Switched to branch 'new-branch' // -->
 
  
 
@@ -100,8 +106,13 @@ git clone https://github.com/your-username/Hacktoberfest-22.git
 #### Make Changes Locally 
 
 ###### Once you have modified existing files or added new files to the project, you can add them to your local repository, which you can do with the git add command. Let’s add the -A flag to add all changes that we have made:
-
-##### // git add -A // or // git add . //
+```
+git add -A
+or 
+git add .
+or
+git add *
+```
 
 ###### Next, we’ll want to record the changes that we made to the repository with the git commit command.
 
@@ -109,15 +120,19 @@ git clone https://github.com/your-username/Hacktoberfest-22.git
 
 ###### If you have a very short message, you can record that with the -m flag and the message in quotes:
 
-###### // Example: // 
+```
+Example: 
 
-##### // git commit -m "Updated Readme.md" //
+ git commit -m "Updated Readme.md"
+ ```
 
 ###### At this point you can use the git push command to push the changes to the current branch of your forked repository:
 
-###### // Example: //
+```
+Example:
 
-##### // git push --set-upstream origin new-branch //
+git push --set-upstream origin new-branch
+```
 
 ### 5. Update Local Repository
 
@@ -128,8 +143,9 @@ git clone https://github.com/your-username/Hacktoberfest-22.git
 ### 6. Configure a Remote for the Fork
 
 ###### Next, you’ll have to specify a new remote upstream repository for us to sync with the fork. This will be the original repository that you forked from. you’ll have to do this with the git remote add command.
-
-##### // git remote add upstream https://github.com/ZapeeoSheikh/Hacktoberfest-22.git 
+```
+git remote add upstream https://github.com/ZapeeoSheikh/Hacktoberfest-22.git 
+```
 
 ###### In this example, // upstream // is the shortname we have supplied for the remote repository since in terms of Git, “upstream” refers to the repository that you cloned from. If you want to add a remote pointer to the repository of a collaborator, you may want to provide that collaborator’s username or a shortened nickname for the shortname.
 
@@ -138,16 +154,20 @@ git clone https://github.com/your-username/Hacktoberfest-22.git
 ###### Once you have configured a remote that references the upstream and original repository on GitHub, you are ready to sync your fork of the repository to keep it up-to-date.
 
 ###### To sync your fork, from the directory of your local repository in a terminal window, you’ll have to use the // git fetch // command to fetch the branches along with their respective commits from the upstream repository. Since you used the shortname “upstream” to refer to the upstream repository, you’ll have to pass that to the command:
-
-##### // git fetch upstream //
+```
+git fetch upstream 
+```
 
 ###### Switch to the local master branch of our repository:
-
-##### // git checkout master //
+```
+git checkout master
+```
 
 ###### You’ll now have to merge any changes that were made in the original repository’s master branch, that you will access through your local upstream/master branch, with your local master branch:
 
-##### // git merge upstream/master //
+```
+git merge upstream/master 
+```
 
 ### 8. Create Pull Request
 
